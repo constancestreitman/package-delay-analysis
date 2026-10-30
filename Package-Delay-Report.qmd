@@ -128,7 +128,7 @@ I separated out the numeric components, and then ran PCA to see if I could reduc
 ```{r}
 dfnumeric = df[8:11]
 pc_result = prcomp(dfnumeric, scale. = TRUE)
-ca_res <- PCA(dfnumeric, scale.unit = TRUE
+pca_res <- PCA(dfnumeric, scale.unit = TRUE)
 ```
 
 The PCA was just to look around, though, not to find anything significant.
