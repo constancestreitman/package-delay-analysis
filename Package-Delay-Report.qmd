@@ -303,7 +303,7 @@ NOTRANSIT.cvmodel
 As you can see, the accuracy is *way* down compared to the model that included Transit Days. A meager 55% is looking very bleak. I ran the step-wise again to make sure my sinking suspicions were correct:
 
 ```{r}
-stepNOTRANSIT = stats::step(NoTransit, direction = "both")
+stepNOTRANSIT = stats::step(NoTransit, direction = "both", trace = 0)
 summary(stepNOTRANSIT) 
 ```
 
