@@ -4,6 +4,7 @@ subtitle: "What predicts a delayed or lost package?"
 author: "Constance Streitman"
 format:
   html:
+    output-file: index.html
     theme: flatly          # also try cosmo, lux, minty, zephyr
     toc: true
     toc-location: left
