@@ -1,10 +1,20 @@
 ---
 title: "Package Delay Report"
+subtitle: "What predicts a delayed or lost package?"
 author: "Constance Streitman"
 format:
   html:
-    output-file: "index.html"
-editor: visual
+    theme: flatly          # also try cosmo, lux, minty, zephyr
+    toc: true
+    toc-location: left
+    code-fold: true        # code hidden behind "Show code" toggles
+    code-summary: "Show code"
+    code-tools: true       # adds a "view full source" button at top
+    embed-resources: true  # one self-contained HTML file, easy for GitHub Pages
+    fig-align: center
+execute:
+  warning: false           # kills the glm.fit warnings
+  message: false           # kills "Waiting for profiling", "Setting direction", etc.
 ---
 
 ```{r}
