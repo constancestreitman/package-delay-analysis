@@ -128,7 +128,7 @@ I separated out the numeric components, and then ran PCA to see if I could reduc
 ```{r}
 dfnumeric = df[8:11]
 pc_result = prcomp(dfnumeric, scale. = TRUE)
-PCA(dfnumeric, scale= TRUE)
+ca_res <- PCA(dfnumeric, scale.unit = TRUE
 ```
 
 The PCA was just to look around, though, not to find anything significant.
@@ -247,7 +247,7 @@ AllReg_clean <- glm(D_or_L ~ Weight_kg + Distance_miles + Cost + Transit_Days +
 ```
 
 ```{r}
-stepmodel = stats::step(AllReg_clean, direction = "both") ##############stepwise
+stepmodel = stats::step(AllReg_clean, direction = "both", trace = 0) ##############stepwise
 summary(stepmodel)
 ```
 
@@ -485,7 +485,7 @@ rf_ctrl = trainControl(
   classProbs = TRUE,
   summaryFunction = twoClassSummary,
   savePredictions = "final",
-  verboseIter = TRUE
+  verboseIter = FALSE
 )
 
 #train RF
@@ -516,7 +516,7 @@ rf_ctrl = trainControl(
   classProbs = TRUE,
   summaryFunction = twoClassSummary,
   savePredictions = "final",
-  verboseIter = TRUE
+  verboseIter = FALSE
 )
 
 #train RF
